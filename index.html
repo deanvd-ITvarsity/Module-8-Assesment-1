@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="login-form-style.css">
+</head>
+
+<body>
+    <h1> Welcome! Please Provide Necessary Credentials to Login Below:</h1>
+    <form>
+        <label for="username">Username: </label><input type="text" id="usernameInput"><br/>
+        <label for="password">Password: </label><input type="text" id="passwordInput"><br/>
+        <p id="message"></p>
+        <br/><br/>
+        <a href="#" class="log-in" onclick="verifyUser()">Log In</a>
+    </form>
+    <script>
+        function verifyUser() {
+            var username = document.getElementById("usernameInput").value;
+            var password = document.getElementById("passwordInput").value;
+
+            checkUserCredentials(username, password);
+        }
+
+        function checkUserCredentials(username, password) {
+            var systemUsername = "Bond"
+            var systemPassword = "007"
+
+            if (username == systemUsername && password == systemPassword) {
+                document.getElementById("message").innerHTML = "Logging In :)"
+                Attribute
+            } else {
+                document.getElementById("message").innerHTML = "Incorrect Credentials :( Please Re-enter!"
+            }
+        }
+    </script>
+</body>
+
+</html>
